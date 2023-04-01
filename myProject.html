@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add My Project</title>
+    <link rel="stylesheet" href="Asset/css/styleProject.css" />
+  </head>
+  <body>
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li>
+          <img src="Asset/img/logo dumbways.png" alt="Logo" />
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="myProject.html">My Project</a></li>
+      </ul>
+      <div class="contact">
+        <a href="">Contact Me</a>
+      </div>
+    </nav>
+
+    <!-- Add Project -->
+    <div class="container">
+      <form onsubmit="getBlog(event)">
+        <h1>ADD MY PROJECT</h1>
+        <div class="my-project">
+          <label for="project">Project Name</label>
+          <input type="text" id="project" />
+        </div>
+
+        <div class="date">
+          <div class="start">
+            <label for="start">Start Date</label>
+            <input type="date" id="start" />
+          </div>
+
+          <div class="end">
+            <label for="end">End Date</label>
+            <input type="date" id="end" />
+          </div>
+        </div>
+
+        <div class="desc">
+          <label for="description">Description</label>
+          <textarea id="description"></textarea>
+        </div>
+
+        <label for="tec">Technologies</label>
+
+        <div class="tec">
+          <div>
+            <input type="checkbox" value="Node-Js" id="node-js" />
+            <label for="node-js">Node Js</label>
+          </div>
+
+          <div>
+            <input type="checkbox" value="Next Js" id="next-js" />
+            <label for="next-js">Next Js</label>
+          </div>
+
+          <div>
+            <input type="checkbox" value="React Js" id="react-js" />
+            <label for="react-js">React Js</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="typescript" />
+            <label for="typescript">TypeScript</label>
+          </div>
+        </div>
+
+        <div class="input-file">
+          <label>Upload Emage</label>
+          <div class="input-job">
+            <label for="inputbox">
+              <p>choose</p>
+              <img src="asset/img/logo-file.png" alt="" />
+            </label>
+            <input type="file" id="inputbox" hidden />
+          </div>
+        </div>
+
+        <div class="submit">
+          <button>Submit</button>
+        </div>
+      </form>
+
+      <!-- my project -->
+
+      <div id="content">
+        <h1>MY PROJECT</h1>
+        <div class="flex-box">
+          <div class="item">
+            <div class="img">
+              <img src="Asset/img/img1.png" alt="" />
+            </div>
+
+            <div class="project-name">
+              <h4>Dumbways Mobile App - 2023</h4>
+              <p>durasi: 3 bulan</p>
+            </div>
+
+            <div class="desk">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur inventore earum ea temporibus aut necessitatibus</p>
+            </div>
+
+            <div class="icon">
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+            </div>
+
+            <div class="edit">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="img">
+              <img src="Asset/img/img1.png" alt="" />
+            </div>
+
+            <div class="project-name">
+              <h4>Dumbways Mobile App - 2023</h4>
+              <p>durasi: 3 bulan</p>
+            </div>
+
+            <div class="desk">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur inventore earum ea temporibus aut necessitatibus</p>
+            </div>
+
+            <div class="icon">
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+            </div>
+
+            <div class="edit">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="img">
+              <img src="Asset/img/img1.png" alt="" />
+            </div>
+
+            <div class="project-name">
+              <h4>Dumbways Mobile App - 2023</h4>
+              <p>durasi: 3 bulan</p>
+            </div>
+
+            <div class="desk">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur inventore earum ea temporibus aut necessitatibus</p>
+            </div>
+
+            <div class="icon">
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+            </div>
+
+            <div class="edit">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="img">
+              <img src="Asset/img/img1.png" alt="" />
+            </div>
+
+            <div class="project-name">
+              <h4>Dumbways Mobile App - 2023</h4>
+              <p>durasi: 3 bulan</p>
+            </div>
+
+            <div class="desk">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur inventore earum ea temporibus aut necessitatibus</p>
+            </div>
+
+            <div class="icon">
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+            </div>
+
+            <div class="edit">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="img">
+              <img src="Asset/img/img1.png" alt="" />
+            </div>
+
+            <div class="project-name">
+              <h4>Dumbways Mobile App - 2023</h4>
+              <p>durasi: 3 bulan</p>
+            </div>
+
+            <div class="desk">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur inventore earum ea temporibus aut necessitatibus</p>
+            </div>
+
+            <div class="icon">
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+              <img src="Asset/img/logo-file.png" alt="" />
+            </div>
+
+            <div class="edit">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Asset/js/task4.js"></script>
+  </body>
+</html>
