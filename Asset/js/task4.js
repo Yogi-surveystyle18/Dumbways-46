@@ -10,22 +10,13 @@ function getBlog(event) {
   let endDate = document.getElementById("end").value;
   let desc = document.getElementById("description").value;
   let image = document.getElementById("inputbox").files;
-  let tech = [];
 
   image = URL.createObjectURL(image[0]);
 
-  if (document.getElementById("node-js").checked) {
-    tech.push(document.getElementById("node-js").value);
-  }
-  if (document.getElementById("next-js").checked) {
-    tech.push(document.getElementById("next-js").value);
-  }
-  if (document.getElementById("react-js").checked) {
-    tech.push(document.getElementById("react-js").value);
-  }
-  if (document.getElementById("typescript").checked) {
-    tech.push(document.getElementById("typescript").value);
-  }
+  let nodeJs = document.getElementById("node-js").checked;
+  let nextJs = document.getElementById("next-js").checked;
+  let react = document.getElementById("react-js").checked;
+  let ts = document.getElementById("typescript").checked;
 
   // validation
 
@@ -47,19 +38,23 @@ function getBlog(event) {
     endDate,
     desc,
     image,
-    tech,
+    nodeJs,
+    nextJs,
+    react,
+    ts,
   };
 
   blogs.push(getData);
-  renderDatas();
+  renderData();
+  console.log(tech);
 }
 
-function renderDatas() {
-  document.getElementsByClassName("flex-box").innerHTML = "";
+function renderData() {
+  document.getElementById("contentProject").innerHTML = "";
   for (let i = 0; i < blogs.length; i++) {
-    document.getElementsByClassName("flex-box").innerHTML = `
+    document.getElementById("contentProject").innerHTML += `
     <div class="item">
-            <div class="img">
+            <div class="img"> 
               <img src="${blogs[i].image}" alt="" />
             </div>
 
@@ -71,18 +66,27 @@ function renderDatas() {
             <div class="desk">
               <p>${blogs[i].desc}</p>
             </div>
-
-            <div class="icon">
-              <img src="Asset/img/logo-file.png" alt="" />
-              <img src="Asset/img/logo-file.png" alt="" />
-              <img src="Asset/img/logo-file.png" alt="" />
-              <img src="Asset/img/logo-file.png" alt="" />
+            <div class="icon" id="iconValue">
+              ${blogs[i].nodeJs === true ? `<img src="Asset/img/node-js.svg" alt="" />` : ""}
+              ${blogs[i].nextJs === true ? `<img src="Asset/img/207px-Nextjs-logo.svg.png" alt="" />` : ""}
+              ${blogs[i].react === true ? `<img src="Asset/img/logo-react-svgrepo-com.svg" alt="" />` : ""}
+              ${blogs[i].ts === true ? `<img src="Asset/img/typescriptlang-icon.svg" alt="" />` : ""}
             </div>
 
             <div class="edit">
               <button>edit</button>
               <button>delete</button>
             </div>
-          </div>`;
+          </div>
+`;
   }
 }
+
+// function renderIcon() {
+//   for (let i = 0; i < blogs.length; i++) {
+//     document.getElementById("contentProject").innerHTML += `
+//     <div class="icon" id="iconValue">
+//               <img src="Asset/img/logo-react-svgrepo-com.svg" alt="" />
+//             </div>`;
+//   }
+// }
