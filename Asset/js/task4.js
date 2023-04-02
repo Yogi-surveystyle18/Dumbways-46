@@ -46,7 +46,6 @@ function getBlog(event) {
 
   blogs.push(getData);
   renderData();
-  console.log(tech);
 }
 
 function renderData() {
@@ -60,7 +59,7 @@ function renderData() {
 
             <div class="project-name">
               <h4>${blogs[i].projectName}</h4>
-              <p>durasi: 3 bulan</p>
+              <p>${getDurations(blogs[i].startDate, blogs[i].endDate)}</p>
             </div>
 
             <div class="desk">
@@ -82,11 +81,24 @@ function renderData() {
   }
 }
 
-// function renderIcon() {
-//   for (let i = 0; i < blogs.length; i++) {
-//     document.getElementById("contentProject").innerHTML += `
-//     <div class="icon" id="iconValue">
-//               <img src="Asset/img/logo-react-svgrepo-com.svg" alt="" />
-//             </div>`;
-//   }
-// }
+function getDurations(startDates, endDates) {
+  const start = new Date(startDates);
+  const end = new Date(endDates);
+  const getTime = end.getDate() - start.getDate();
+
+  if (getTime > 0) {
+    return `Duration: ${getTime} day ago`;
+  } else {
+    const mounth = end.getMonth() + 1 - (start.getMonth() + 1);
+    if (mounth > 0) {
+      return `Duration: ${mounth} Month ago`;
+    } else {
+      const year = end.getFullYear() - start.getFullYear();
+      if (year > 0) {
+        return `Duration: ${year} Year agoo`;
+      }
+    }
+  }
+}
+
+console.log(start);
