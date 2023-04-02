@@ -87,15 +87,15 @@ function getDurations(startDates, endDates) {
   const getTime = end.getDate() - start.getDate();
 
   if (getTime > 0) {
-    return `Duration: ${getTime} day ago`;
+    return `Duration: ${getTime} day`;
   } else {
     const mounth = end.getMonth() + 1 - (start.getMonth() + 1);
     if (mounth > 0) {
-      return `Duration: ${mounth} Month ago`;
+      return `Duration: ${mounth} Month`;
     } else {
       const year = end.getFullYear() - start.getFullYear();
       if (year > 0) {
-        return `Duration: ${year} Year agoo`;
+        return `Duration: ${year} Year`;
       }
     }
   }
